@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Loader 1 --------------------------------------------------------------------- */
+
+@keyframes blink {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+#loader .dot-1,
+#loader .dot-2,
+#loader .dot-3 {
+  animation-name: blink;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+#loader .dot-2 {
+  animation-delay: 150ms;
+}
+
+#loader .dot-3 {
+  animation-delay: 300ms;
+}
+
+/* ---- Loader 2 --------------------------------------------------------------------- */
+
+@keyframes moveX-fast {
+  from {
+    transform: translateX(8px);
+    background-color: pink;
+  }
+  to {
+    transform: translateX(-8px);
+  }
+}
+
+#loader-2 .dot-1,
+#loader-2 .dot-2,
+#loader-2 .dot-3 {
+  animation-name: moveX-fast;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#loader-2 .dot-2 {
+  animation-delay: 100ms;
+}
+
+#loader-2 .dot-3 {
+  animation-delay: 200ms;
+}
+
+/* ---- Loader 3 --------------------------------------------------------------------- */
+
+@keyframes music {
+  from {
+    background-color: pink;
+  }
+  to {
+    height: 28px;
+  }
+}
+
+#loader-3 .bar-1,
+#loader-3 .bar-2,
+#loader-3 .bar-3 {
+  animation: music 1s infinite;
+}
+
+#loader-3 .bar-2 {
+  animation-delay: 200ms;
+}
+
+#loader-3 .bar-3 {
+  animation-delay: 400ms;
+}
+
+/* ---- Typing 1 --------------------------------------------------------------------- */
+
+@keyframes moveY {
+  from {
+    background-color: pink;
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+#typing .dot-1,
+#typing .dot-2,
+#typing .dot-3 {
+  animation-name: moveY;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+#typing .dot-2 {
+  animation-delay: 150ms;
+}
+
+#typing .dot-3 {
+  animation-delay: 300ms;
+}
+
+/* ---- Spinner --------------------------------------------------------------------- */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#circle-loader .blue-loader {
+  animation: rotate 2s infinite forwards;
+  animation-timing-function: steps(50, start);
+}
+
+/* ---- Spinner 2 --------------------------------------------------------------------- */
+
+@keyframes rotate-2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#circle-loader-2 .blue-loader {
+  animation-name: rotate-2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timining-function: linear;
+}
+
+/* ---- Square-loader --------------------------------------------------------------------- */
+
+@keyframes rotate-sq {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(765deg);
+  }
+}
+
+#square-loader .loader {
+  animation-name: rotate-sq;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timining-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+/* ---- Dots-loader --------------------------------------------------------------------- */
+
+@keyframes stretch {
+  from {
+    width: 0px;
+  }
+  30% {
+    width: 20px;
+  }
+  50%,
+  80% {
+    width: 70px;
+  }
+  to {
+    width: 128px;
+  }
+}
+
+#loading-bar .bar {
+  animation: stretch 2s forwards;
+  animation-timing-function: steps(5, start);
+}
